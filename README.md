@@ -50,10 +50,7 @@ Os dados para este projeto podem ser encontrados em: https://www.kaggle.com/harl
 - O valor igual a 33 na coluna **bathroom** foi considerada um erro e por isso foi delatada das análises
 - Os valores não inteiros nos atributos **bathrooms** e **floors** foram arrendados com o intuito de simplificar o projeto.
 - A coluna **price** significa o preço que a casa foi / será comprada pela empresa House Rocket
-- Valores duplicados em ID foram removidos e considerados somente a compra mais recente
 - A localidade e a condição do imóvel foram características decisivas na compra ou não do imóvel
-- A estação do ano foi a característica decisiva para a época da venda do imóvel
-
 
 
 # 4. Estratégia de solução
@@ -84,11 +81,11 @@ Quais foram as etapas para solucionar o problema de negócio:
 
 Insights mais relevantes para o projeto:
 
-Imóveis com vista pra água são em média 300% mais caros
+Imóveis com vista pra água são em média 300% mais caros, mas curiosamente dos imóveis selecionados pelos nossos filtros, a diferença cai para 30%
 
-Imóveis que nunca sofreram reformas são 30.21% mais baratos que os imóveis que ja sofreram algum tipo de reforma.
+Imóveis que nunca sofreram reformas são 30.25% mais baratos que os imóveis que ja sofreram algum tipo de reforma.
 
-Imóveis com 6-9 quartos são mais caros sendo,149% mais caros se comparado a imóveis com 0 a 3 quartos, 48.9% mais caros se comparados a imóveis com 3 a 6 quartos e 107% mais caros se comparados a imóveis com 9 a 11 quartos.
+Imóveis com 5-8 quartos são mais caros sendo,43% mais caros se comparado a imóveis com 9 a 11 quartos,  e 89.27% mais caros se comparados a imóveis com 0 a 3 quartos.
 
 
 
@@ -103,8 +100,8 @@ O que as análises das hipóteses dizem sobre o negócio.
 | **H2** - Imóveis com data de construção menor que 1955 são em média 50% mais baratos | Falsa      | Investir em imóveis independente da data de construção       |
 | **H3** - Imóveis sem porão são 40% maiores do que imóveis com porão | Verdadeira | Investir em imóveis sem porão                                |
 | **H4** - Imóveis que nunca foram reformados são em média 20% mais baratos | Verdadeira | Investir em imóveis não reformados e reformá-los para venda  |
-| **H5** - Imóveis com mais banheiros são em média 15% mais caros | Falsa      | Investir em imóveis de 3-5 banheiros                         |
-| **H6** - Imóveis com mais quartos são em média 15% mais caros   | Falsa      | Investir em imóveis com 6-9 quartos                  |
+| **H5** - Imóveis com mais banheiros são em média 15% mais caros | Falsa      | Investir em imóveis de até 3 banheiros                         |
+| **H6** - Imóveis com mais quartos são em média 15% mais caros   | Falsa      | Investir em imóveis de até 3 quartos                  |
 | **H7** - O crescimento do preço dos imóveis mês após mês no ano de 2014 é de 10% | Falsa      | Investir em imóveis nos meses de menor custo                 |
 | **H8** - O crescimento do preço dos imóveis ano após ano é de 10% | Falsa      | Investir em imóveis nos anos de menor custo                 |
 
@@ -116,8 +113,8 @@ Ao final do estudo foi sugerido os 20 imóveis mais lucrativos para a empresa ad
 
 |        |                         Valor USD                        |
 | :-------------: | :----------------------------------------------------------: |
-|     Investimento inicial       |       6889600        |
-|     **Lucro Esperado**      |                    2066880                    |
+|     Investimento inicial       |       15215317        |
+|     **Lucro Esperado**      |                    14540533                    |
 
 
 
@@ -125,7 +122,7 @@ Ao final do estudo foi sugerido os 20 imóveis mais lucrativos para a empresa ad
 
 # 7. Conclusão
 
-Os objetivos foram alcançados. Os imóveis foram agrupados por região (zipcode). Considerando o preço do imóvel e a condição minima como regular (3 - 5) foi calculado a mediana do preço. Ao total 10505 imóveis foram declarados como Imóveis com alto potencial de revenda, dentre estes foram sugeridos os 20 mais lucrativos para a empresa comprar. Os imóveis aptos para compra foram agrupados pela localidade e a estação do ano. A mediana foi calculada e imóveis com preço abaixo da mediana teve um acréscimo de 10% em seu valor, enquanto imóveis com preço acima da mediana teve um acréscimo de 30% acima do seu valor. 
+Os objetivos foram alcançados. Os imóveis foram agrupados por região (zipcode). Considerando o preço do imóvel e a condição minima como regular (3 - 5) foi calculado a mediana do preço. Ao total 10579 imóveis foram declarados como Imóveis com alto potencial de revenda, dentre estes foram sugeridos os 20 mais lucrativos para a empresa comprar. A mediana foi calculada e imóveis com preço abaixo da mediana teve um acréscimo de 10% em seu valor, enquanto imóveis com preço acima da mediana teve um acréscimo de 30% acima do seu valor. 
 
-Para o futuro seria interessante analisar o potencial de lucratividade atraves de reformas para alguns imóveis baseados em sua localização, comprando imóveis em condições ruins, reformando-os e revendendo-os com finalidade de avaliar qual tipo de reforma retornaria lucro para a empresa. Outra ideia seria a possibilidade de prever a valorização do imóvel, tirando o limitando de 4 estações para os valores dos imóveis, possibilitando uma margem de lucro maior.
+Para o futuro seria interessante analisar o potencial de lucratividade atraves de reformas para alguns imóveis baseados em sua localização, comprando imóveis em condições ruins, reformando-os e revendendo-os com finalidade de avaliar qual tipo de reforma retornaria lucro para a empresa. Outra ideia seria a possibilidade de prever a valorização do imóvel.
 
